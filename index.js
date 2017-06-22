@@ -56,6 +56,10 @@ module.exports = function(homebridge) {
 			model: 'switch',
 			definitions: [{ service: Service.Switch, characteristics: [ Characteristic.On ] }],
 		},
+                {
+                        model: 'contactsensor',
+                        definitions: [{ service: Service.ContactSensor, characteristics: [ Characteristic.ContactSensorState ] }],
+                },
 	];
 
 	homebridge.registerPlatform("homebridge-telldus", "Telldus", TelldusPlatform);
